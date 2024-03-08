@@ -26,8 +26,7 @@ public class BlogDAO {
 
     public long createUser(String userName, int userAge) {
         /*-----------------------------------------------------------------*/
-        String sql = String.format("INSERT INTO users (name, age) VALUES ('%s', %d) RETURNING ID",
-                userName, userAge);
+        String sql = "";
         /*-----------------------------------------------------------------*/
 
         try {
@@ -55,7 +54,7 @@ public class BlogDAO {
 
     public void printUsers() {
         /*-----------------------------------------------------------------*/
-        String sql = "SELECT * FROM users";
+        String sql = "";
         /*-----------------------------------------------------------------*/
 
         try {
@@ -76,7 +75,7 @@ public class BlogDAO {
 
     public long createTag(String tag) {
         /*-----------------------------------------------------------------*/
-        String sql = String.format("INSERT INTO tag (text) VALUES ('%s') RETURNING id", tag);
+        String sql = "";
         /*-----------------------------------------------------------------*/
 
         try {
@@ -174,7 +173,7 @@ public class BlogDAO {
 
     public void printTags() {
         /*-----------------------------------------------------------------*/
-        String sql = "SELECT * FROM tag";
+        String sql = "";
         /*-----------------------------------------------------------------*/
 
         try {
@@ -247,7 +246,7 @@ public class BlogDAO {
 
     public void deleteTag(long tagId) {
         /*-----------------------------------------------------------------*/
-        String sql = String.format("DELETE FROM tag WHERE id = %d", tagId);
+        String sql = "";
         /*-----------------------------------------------------------------*/
 
         try {
